@@ -1,0 +1,44 @@
+.psbslider {
+  width: 380px; 
+  height:320px !important;
+  overflow: hidden;
+}
+
+.psbslides {
+  display: flex;  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+ /*scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;*/
+ 
+}
+.psbslides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.psbslides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.psbslides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.psbslides > div.psbslide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 380px;
+  height: 320px;
+  margin-right: 50px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
